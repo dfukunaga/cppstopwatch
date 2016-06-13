@@ -9,13 +9,13 @@ Single file stopwatch library for C++
 ```c++
 #include "stw.h"
 
-{
+void SimplestUsage() {
   auto sw = stw::CreateStarted();
   doSomething();
   std::cout << sw->Stop() << std::endl;
 }
 
-{
+void MeasureTwoFunction() {
   auto sw = stw::CreateUnstarted();
   
   sw->Start();
@@ -31,12 +31,14 @@ Single file stopwatch library for C++
   std::cout << sw << std::endl;
 }
 
-{
+void DesiredTimeUnit() {
   auto sw = stw::CreateUnstarted();
 
   sw->Start();
   doSomething1();
   auto elapsed1 = sw->Stop()->Elapsed<stw::milli>();
+  // Available time units
+  //   stw::nano, stw::micro, stw::milli, stw::sec, stw::min, stw::hour
 
   sw->Reset()->Start();
   doSomething2();
