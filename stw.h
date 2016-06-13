@@ -1,3 +1,6 @@
+// Copyright(c) 2016 Daisuke Fukunaga  All rights reserved.
+// Distributed under the MIT License (http://opensource.org/licenses/MIT)
+
 #ifndef CPPSTOPWATCH_STW_H_
 #define CPPSTOPWATCH_STW_H_
 
