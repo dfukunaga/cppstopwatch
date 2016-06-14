@@ -15,14 +15,14 @@ void SimplestUsage() {
   std::cout << sw->Stop() << std::endl;
 }
 
-void MeasureTwoFunction() {
+void MeasureTwoFunctions() {
   auto sw = stw::CreateUnstarted();
   
   sw->Start();
   doSomething1();
   sw->Stop();
 
-  if (!sw->IsRunning) {
+  if (!sw->IsRunning()) {
     sw->Start();
   }
   doSomething2();
